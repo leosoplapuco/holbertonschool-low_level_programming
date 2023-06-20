@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 /**
- *main - I can not sleep game
+ * main - i can not sleep
  *
- *Return: zero on success
+ *Return - zero on success
  *
  * */
+
 int main(void)
 {
 char k;
