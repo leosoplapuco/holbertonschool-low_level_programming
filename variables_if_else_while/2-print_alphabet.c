@@ -1,11 +1,9 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
 /**
  *main - I can not sleep game
  *
- *return: zero on success
+ *Return: zero on success
  *
  * */
 
