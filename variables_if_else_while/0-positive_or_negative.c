@@ -1,8 +1,12 @@
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - Conditionals with c
+ *
+ *Learnign conditionals in c
+ *
+ * Return: zero on success
+ */
 int main(void)
 {
 int n;
