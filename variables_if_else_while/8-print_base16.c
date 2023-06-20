@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 /**
- * Main - hexadecimal
- *
- * Return : zero on success
- *
- * */
+* main - hexadecimal
+*
+*Typing the hexadecimal numbers
+*
+* Return: zero on success
+*/
 
 int main(void)
 {
