@@ -3,9 +3,10 @@
 /**
  * main - i can not sleep
  *
- *Return - zero on success
+ * the alphabet
  *
- * */
+ * Return: zero success
+ */
 
 int main(void)
 {
