@@ -3,6 +3,8 @@
 /**
 * main - numbers on base sixteen
 *
+* script than print the hezadecimal numbers
+*
 * Return : zero on success
 */
 int main(void)
