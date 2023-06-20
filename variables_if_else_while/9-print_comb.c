@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 /**
-* main - only one digit
+* main - Only one digit
 *
-*All numbers posible but only once digit
+*typing one digit
 *
-* Return. zero on success
+* Return: zero on success
 */
+
 int main(void)
 {
 int num;
