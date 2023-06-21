@@ -10,15 +10,11 @@
  */
 
 void print_alphabet (void)
-
 {
 	int num;
-
 	for(num = 97; num <= 122; num++)
-	
 	{
 		putchar (num);
 	}
-
-	putchar('\n');
+	putchar ('\n');
 }
