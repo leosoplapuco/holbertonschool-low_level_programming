@@ -3,13 +3,13 @@
 
 /**
  * print_alphabet - Script than print the alphabet
- * k: initial value 
- * k: maximum value
+ * 
+ * num: initial value 
  *
  * Return: zero on success.
  */
 
-void print_alphabet(void)
+void print_alphabet (void)
 
 {
 	int num;
@@ -22,4 +22,3 @@ void print_alphabet(void)
 
 	putchar('\n');
 }
-
