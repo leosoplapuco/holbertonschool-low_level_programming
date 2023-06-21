@@ -1,4 +1,4 @@
-#include "1-alphabet.h"
+#include <stdio.h>
 
 /**
 * Main - main
