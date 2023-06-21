@@ -1,15 +1,2 @@
-#include "main.h"
-
-/**
-*
-*Main - Cheking
-*
-*Return : zero on success
-*
-*/
-
-int main (void)
-{
-print_alphabet();
-return(0);
-}
+void print_alphabet(void);
+int _putchar(char c);
