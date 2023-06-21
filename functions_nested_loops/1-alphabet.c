@@ -9,12 +9,6 @@
  * Return: zero on success.
  */
 
-int main(void) {
-    print_alphabet();
-}
-
-void print_alphabet(void);
-
 void print_alphabet(void){
 	int k;
 	for(k=97; k<=122; k++){
