@@ -12,12 +12,12 @@
 void print_alphabet(void)
 
 {
-	int k;
+	int num;
 
-	for(k=97; k<=122; k++)
+	for(num = 97; num <= 122; num++)
 	
 	{
-		putchar(k);
+		putchar (num);
 	}
 
 	putchar('\n');
