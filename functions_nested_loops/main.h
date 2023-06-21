@@ -1,13 +1,15 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-* Main - main
 *
-* Return : zero on succes
+*Main - Cheking
+*
+*Return : zero on success
 *
 */
 
-int main (void){
+int main (void)
+{
 print_alphabet();
 return(0);
 }
