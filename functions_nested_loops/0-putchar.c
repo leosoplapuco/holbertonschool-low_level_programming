@@ -8,7 +8,7 @@
  * Return: zero on success
  */
 
-int main(){
+int main(void){
 
 char frase[] = "_putchar";
 printf("%s\n", frase);
