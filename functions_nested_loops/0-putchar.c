@@ -11,8 +11,7 @@
 int main(){
 
 char frase[] = "_putchar";
-printf(frase);
-putchar('\n');
-
+printf("%s\n", frase);
 return 0;
+
 }
