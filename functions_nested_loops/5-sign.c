@@ -3,8 +3,8 @@
 #include "main.h"
 
 /**
-* print_singn - Identifying numbers
-* @n - value of the number
+* print_sign - Identifying numbers.
+* @n - value of the number.
 * Return: zero on success.
 */
 
