@@ -2,11 +2,8 @@
 #include "main.h"
 
 /**
-*main - ten times alphabet
 *
-*num: initial value
-*
-*print_alphabet_x10: function than type the alphabet ten times
+*print_alphabet_x10 - print the alphabet ten times
 *
 *i:times to repeat
 *
