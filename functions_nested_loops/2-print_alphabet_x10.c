@@ -3,8 +3,8 @@
 
 /**
 * Main - print_alphabet_x10
-* 
-* The function print_alphabet_x10 will print the alphabeth ten times
+*
+* Description: The function print_alphabet_x10 will print the alphabeth ten times
 *
 * Return zero on success
 *
