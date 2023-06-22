@@ -2,10 +2,8 @@
 #include "main.h"
 
 /**
-*_isalpha - Script than print the values one or zero
-*
-*@c: value
-*
+* _isalpha - Script than print the values one or zero
+* @c: value
 * Return: zero on success.
 */
 
