@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
-*_islower(int c) - Script than print the values one or zero
+*int _islower(char c) - Script than print the values one or zero
 *
 *num: value
 *
