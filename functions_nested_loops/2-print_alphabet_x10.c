@@ -4,13 +4,18 @@
 /**
 * Main - print_alphabet_x10
 *
-* Description: The function print_alphabet_x10 will print the alphabeth ten times
+* Description: Function print_alphabet_x10 print the alphabeth ten times
 *
 * Return zero on success
 *
 */
 
 void print_alphabet_x10(void)
+/**
+ * 
+ * Description : The function print ten times
+ *
+ * */
 {
 	int num;
 	int i;
