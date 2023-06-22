@@ -8,16 +8,14 @@
 * Return: zero on success.
 */
 
-int _abs(int)
+int _abs(int num)
 {
-	int num;
-
 	if(num < 0)
-    	{
-        	num = num * -1;
-        	printf ("%d", num);
+	{
+		num = num * -1;
+		printf ("%d", num);
     	}else
     	{
-        	printf ("%d", num);
+		printf ("%d", num);
     	}
 }
