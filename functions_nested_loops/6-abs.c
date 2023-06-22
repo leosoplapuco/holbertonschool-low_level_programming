@@ -8,8 +8,10 @@
 * Return: zero on success.
 */
 
-int _abs(int num)
+int _abs(int)
 {
+	int num;
+
 	if(num < 0)
     	{
         	num = num * -1;
