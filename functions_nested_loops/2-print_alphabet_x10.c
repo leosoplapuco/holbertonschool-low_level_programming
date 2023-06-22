@@ -5,8 +5,10 @@
 *main - ten times alphabet
 *
 *num: initial value
-*print_alphaber_x10: function that print the alphabet ten times
-*i: times to repeat
+*
+*print_alphabet_x10: function than type the alphabet ten times
+*
+*i:times to repeat
 *
 * Return: zero on success.
 */
