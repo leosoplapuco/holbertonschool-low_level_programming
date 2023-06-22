@@ -13,11 +13,8 @@
 void print_alphabet_x10(void)
 
 /**
- *
- * Description function print_alphabet_x10 - The function print ten times
- *
- *
- */
+* Description function print_alphabet_x10 - The function print ten times
+*/
 
 {
 	int num;
