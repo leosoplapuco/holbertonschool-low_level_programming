@@ -4,7 +4,7 @@
 /**
 *_isalpha - Script than print the values one or zero
 *
-*c: value
+*@c: value
 *
 * Return: zero on success.
 */
