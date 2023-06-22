@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
-* _islower - return one if the letter is lower..
-* c - variable
+* _islower - return one if the letter is lower.
+* c - parameter
 * Return: zero on success
 */
 
