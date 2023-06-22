@@ -4,8 +4,8 @@
 
 /**
 * times_table - Tying numbers in rows and columns.
-* @a: column value.
-* @b: row value.
+* a: column value.
+* b: row value.
 * Return: zero on success.
 */
 
