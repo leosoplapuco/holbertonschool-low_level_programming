@@ -13,7 +13,7 @@
 void print_alphabet_x10(void)
 
 /**
-* Description function print_alphabet_x10 - The function print ten times
+* Description: This functions prints the lowercase alphabet ten times. After printing the alphabet, a new line is added at the end.
 */
 
 {
