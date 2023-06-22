@@ -11,6 +11,7 @@
 int print_last_digit(int num)
 {
 	int last;
+
 	last = num % 10;
 
 	if (last < 0)
@@ -22,4 +23,6 @@ int print_last_digit(int num)
 		_putchar (last + 48);
 		return (last);
 	}
+	
+	return (0);
 }
