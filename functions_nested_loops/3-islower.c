@@ -3,7 +3,7 @@
 
 /**
 * _islower - return one if the letter is lower.
-* c - parameter
+* c: Represent the value get in ASCII format.
 * Return: zero on success
 */
 
