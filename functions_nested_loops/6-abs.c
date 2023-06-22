@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 #include "main.h"
 
 /**
@@ -10,11 +11,11 @@
 int _abs(int num)
 {
 	if(num < 0)
-    {
-        num = num * -1;
-        printf("%d", num);
-    }else
-    {
-        printf("%d", num);
-    }
+    	{
+        	num = num * -1;
+        	printf ("%d", num);
+    	}else
+    	{
+        	printf ("%d", num);
+    	}
 }
