@@ -18,4 +18,6 @@ int _abs(int num)
     	{
 		printf ("%d", num);
     	}
+	
+	return (num);
 }
