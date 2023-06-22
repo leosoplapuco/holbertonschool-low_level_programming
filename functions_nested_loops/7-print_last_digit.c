@@ -21,9 +21,8 @@ int print_last_digit(int num)
 	} else
 	{
 		_putchar (last + 48);
-		return (last);
 	}
 	
-	return (0);
+	return (last);
 
 }
