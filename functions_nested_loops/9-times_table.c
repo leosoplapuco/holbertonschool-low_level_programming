@@ -18,11 +18,15 @@ void times_table(void)
 	{
 		for (b = 0; b <= 9; b++)
 		{
-			if (b != 0)
+			if (b == 0)
 			{
-				printf(", ");
-				printf("%2d", a * b);
+				printf(",");
 			}
+			else
+			{
+				printf(" ");
+			}
+			printf("%2d", a*b);
 		}
 		printf("\n");
 	}
