@@ -5,4 +5,5 @@ int _isalpha(char c);
 int print_sign(char n);
 int _abs(int num);
 int print_last_digit(int num);
+void jack_bauer(void);
 int _putchar(char c);
