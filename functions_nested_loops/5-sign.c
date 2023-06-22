@@ -4,16 +4,16 @@
 
 /**
 *
-*print_singn - identifing numbers
+*print_singn - identifying numbers
 *
 *n: value of the number
 *
 *Return: zero on success.
 */
 
-int print_sign(char n)
+int print_sign(int n)
 {
-	if (n == 0)
+	if (n == 48)
 	{
 		putchar('0');
 		return(0);
