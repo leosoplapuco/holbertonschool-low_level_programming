@@ -2,11 +2,9 @@
 #include "main.h"
 
 /**
-*int _islower(char c) - Script than print the values one or zero
-*
-*num: value
-*
-* Return: zero on success.
+* _islower - return one if the letter is lower..
+* c - variable
+* Return: zero on success
 */
 
 int _islower(char c)
