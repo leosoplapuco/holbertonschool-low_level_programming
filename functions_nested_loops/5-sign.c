@@ -11,11 +11,11 @@
 *Return: zero on success.
 */
 
-int print_sign(int n)
+int print_sign(char n)
 {
-	if (n == 48)
+	if (n == 0)
 	{
-		putchar('0');
+		putchar(48);
 		return(0);
 	}
 	else if (n > 0)
