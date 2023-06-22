@@ -4,7 +4,7 @@
 
 /**
 * print_sign - Identifying numbers.
-* @n - value of the number.
+* @n: Value of the number.
 * Return: zero on success.
 */
 
