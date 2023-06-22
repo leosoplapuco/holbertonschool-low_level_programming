@@ -15,11 +15,11 @@ int print_last_digit(int num)
 
 	if (last < 0)
 	{
-		_putchar (-last + 48);
+		printf (-last + '0');
 		return (-1);
 	}else
 	{
-		_putchar (1 + 48);
+		printf (1 + '0');
 		return (1);
 	}
 }
