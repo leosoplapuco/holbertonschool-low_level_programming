@@ -2,12 +2,12 @@
 #include "main.h"
 
 /**
+* Main - print_alphabet_x10
+* 
+* The function print_alphabet_x10 will print the alphabeth ten times
 *
-*print_alphabet_x10 - print the alphabet ten times
+* Return zero on success
 *
-*i:times to repeat
-*
-* Return: zero on success.
 */
 
 void print_alphabet_x10(void)
