@@ -14,9 +14,10 @@ void print_alphabet_x10(void)
 
 /**
  *
- * print_alphabet_x10 - The function print ten times
+ * function print_alphabet_x10 - The function print ten times
  *
- * */
+ *
+ */
 
 {
 	int num;
