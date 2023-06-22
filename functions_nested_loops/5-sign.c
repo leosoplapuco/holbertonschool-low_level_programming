@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 #include "main.h"
 
 /**
@@ -7,7 +8,7 @@
 *
 *n: value of the number
 *
-* Return: zero on success.
+*Return: zero on success.
 */
 
 int print_sign(char n)
