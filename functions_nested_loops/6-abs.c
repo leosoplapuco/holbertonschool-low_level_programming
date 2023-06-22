@@ -10,7 +10,7 @@
 
 int _abs(int num)
 {
-	if(num < 0)
+	if (num <= 0)
 	{
 		num = num * -1;
 		printf ("%d", num);
@@ -18,6 +18,6 @@ int _abs(int num)
     	{
 		printf ("%d", num);
     	}
-	
+
 	return (num);
 }
