@@ -16,10 +16,10 @@ int print_last_digit(int num)
 	if (last < 0)
 	{
 		_putchar (-last + 48);
-		return (-1);
+		return (-last);
 	}else
 	{
 		_putchar (last + 48);
-		return (1);
+		return (last);
 	}
 }
