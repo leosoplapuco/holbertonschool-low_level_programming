@@ -9,12 +9,14 @@
  * Return: zero on success.
  */
 
-void print_alphabet (void)
+void print_alphabet(void)
 {
 	int num;
-	for(num = 97; num <= 122; num++)
+
+	for (num = 97; num <= 122; num++)
 	{
 		putchar (num);
 	}
+
 	putchar ('\n');
 }
