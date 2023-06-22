@@ -12,8 +12,8 @@
 
 void print_alphabet_x10(void)
 /**
- * 
- * Description : The function print ten times
+ *
+ * print_alphabet_x10 - The function print ten times
  *
  * */
 {
