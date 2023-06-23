@@ -10,12 +10,12 @@
 
 int _isdigit(int c)
 {
-	if (c > 0 || c <= 9)
+	if ((c > 31 || c < 48) && (c > 57 || c <= 126))
 	{
-		return (1);
+		return (0);
 	}
 	else
 	{
-		return (0);
+		return (1);
 	}
 }
