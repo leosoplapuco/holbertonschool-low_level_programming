@@ -15,6 +15,7 @@ void print_numbers(void)
 
 	while (c < 10)
 	{
-		printf("%d", c++);
+		c++
+		printf("%d", c);
 	}
 }
