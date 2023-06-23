@@ -21,7 +21,7 @@ void times_table(void)
 
 		    if (out < 10)
 		    {
-			    if (b == 0)
+			    if (b === 0)
 				    printf("%2d,", out);
 			    else
 				    printf(" %2d,", out);
