@@ -11,11 +11,10 @@ void print_numbers(void)
 {
 	int c;
 
-	c = '0';
+	c = 0;
 
-	while (c < '10')
+	while (c <= 9)
 	{
-		c++;
-		printf("%d", c);
+		printf(c++);
 	}
 }
