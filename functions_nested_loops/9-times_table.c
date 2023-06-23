@@ -34,7 +34,7 @@ void times_table(void)
 			}
 			else
 			{
-				printf("%3d,", result);
+				printf("%3d,", out);
 			}
 
 		}
