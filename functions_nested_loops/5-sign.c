@@ -8,7 +8,7 @@
 * Return: zero on success.
 */
 
-int print_sign(char n)
+int print_sign(int n)
 {
 	if (n > 0)
 	{
