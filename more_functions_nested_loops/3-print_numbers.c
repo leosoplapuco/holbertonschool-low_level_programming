@@ -13,6 +13,6 @@ void print_numbers(void)
 
 	for (c = -1; c < 10; c++)
 	{
-		printf("%d", c)
+		printf("%d", c++)
 	}
 }
