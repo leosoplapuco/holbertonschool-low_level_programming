@@ -12,9 +12,9 @@ void print_numbers(void)
 	int c;
 	c = 0;
 
-	while(c < 10)
+	while (c < 10)
 	{
 		c++;
-		printf("%d\n", c);
+		printf ("%d", c);
 	}
 }
