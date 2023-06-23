@@ -11,26 +11,30 @@
 
 void times_table(void)
 {
-    int a, b, out;
+	int a, b, out;
 
-    for (a = 0; a <= 9; a++)
-    {
-	    for (b = 0; b <= 9; b++)
-	    {
-		    out = a * b;
+	for (a = 0; a <= 9; a++)
+	{
+		putchar(48);
+		
+		for (b = 1; b <= 9; b++)
+		{
+			out = a * b;
 
-		    if (out < 10 && out != 0)
-		    {
-			    if (b == 0)
-				    printf("%2d,", out);
-			    else
-				    printf("%2d,", out);
-		    }
-		    else
-		    {
-			    printf("%3d,", out);
-		    }
-	    }
-	    printf("\n");
-    }
+			putchar(44);
+			putchar(32);
+			
+			if (out <= 9)
+			{
+				putchar(32);
+				putchar(out + 48);
+			}
+			else
+			{
+				putchar((out / 10) + 48);
+				putchar((out % 10) + 48);
+			}
+		}
+		putchar('\n');
+	}
 }
