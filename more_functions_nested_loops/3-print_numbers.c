@@ -11,9 +11,9 @@ void print_numbers(void)
 {
 	int c;
 
-	c = 47;
+	c = '0';
 
-	while (c < 58)
+	while (c < '10')
 	{
 		c++;
 		printf("%d", c);
