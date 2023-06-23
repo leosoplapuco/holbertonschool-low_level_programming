@@ -24,11 +24,11 @@ void times_table(void)
 			    if (b == 0)
 				    printf("%2d,", out);
 			    else
-				    printf("  %2d,", out);
+				    printf(" %2d,", out);
 		    }
 		    else
 		    {
-			    printf(" %3d,", out);
+			    printf("%3d,", out);
 		    }
 	    }
 	    printf("\n");
