@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
-* _isdigit - acknowledges if is Uppercase.
+* _isdigit - acknowledges if is a digit.
 * @c: value
 * Return: zero on success.
 */
