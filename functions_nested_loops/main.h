@@ -7,4 +7,5 @@ int _abs(int num);
 int print_last_digit(int num);
 void jack_bauer(void);
 void times_table(void);
+int add(int one, int two);
 int _putchar(char c);
