@@ -4,13 +4,13 @@
 
 /**
 * add - This function will receive two numbers to plus..
-* one: first parameter.
-* two: seconf parameter.
+* @one: first parameter.
+* @two: seconf parameter.
 * Return: zero on success.
 */
 
 int add(int one, int two)
 {
 	int sum = one + two;
-	return sum;
+	return (sum);
 }
