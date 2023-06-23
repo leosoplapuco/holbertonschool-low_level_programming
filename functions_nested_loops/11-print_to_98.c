@@ -3,16 +3,16 @@
 #include "main.h"
 
 /**
-* add - This function will receive two numbers to plus..
-* n: given number.
+* print_to_98 - This function will receive two numbers to plus..
+* @n: given number.
 * Return: zero on success.
 */
 
 void print_to_98(int n)
 {
-	if (98 < n)
+	if (n > 98)
 	{
-		for (; 98 < n; n--)
+		for (; n > 98; n--)
 		{
 			printf("%d, ", n);
 		}
