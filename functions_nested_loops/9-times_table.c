@@ -19,11 +19,10 @@ void times_table(void)
 	    {
 		    out = a * b;
 
-		    if (out < 10)
+		    if (out < 10 && out != 0)
 		    {
 			    if (b == 0)
 				    printf("%2d,", out);
-			    else if printf("%2d,", out);
 			    else
 				    printf("%2d,", out);
 		    }
