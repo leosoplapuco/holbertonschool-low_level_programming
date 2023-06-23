@@ -9,7 +9,7 @@
 * Return: zero on success.
 */
 
-void mul(int a, int b)
+int mul(int a, int b)
 {
-	printf("%d\n", a * b);
+	return(a * b);
 }
