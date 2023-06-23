@@ -13,7 +13,7 @@ void print_numbers(void)
 
 	c = -1;
 
-	while (c < 10)
+	while (c < 9)
 	{
 		c++;
 		printf("%d", c);
