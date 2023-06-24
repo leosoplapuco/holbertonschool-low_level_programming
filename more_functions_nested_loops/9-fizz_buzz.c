@@ -2,8 +2,9 @@
 #include "main.h"
 
 /**
-* main - filtring on c.
-* i: value.
+* main - principal function.
+* FizzBuzz - function to change characteres.
+* @num: value.
 * Return: zero on success
 */
 
