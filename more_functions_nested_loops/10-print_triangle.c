@@ -15,18 +15,25 @@ void print_triangle(int size)
 	int a;
 	int b;
 	int c;
-
-	for (a = 1; a <= size; a++)
+	
+	if (size > 0)
 	{
-		for (c = 1; c <= size -a; c++)
+		for (a = 1; a <= size; a++)
 		{
+			for (c = 1; c <= size - a; c++)
+			{
 			printf(" ");
-		}
-		for (b=1; b <= a; b++)
-		{
-			printf("#");
-		}
+			}
+			for (b = 1; b <= a; b++)
+			{
+				printf("#");
+			}
 
+			printf("\n");
+		}
+	}
+	else
+	{
 		printf("\n");
 	}
 }
