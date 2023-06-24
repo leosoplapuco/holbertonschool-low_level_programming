@@ -3,13 +3,14 @@
 
 /**
 * main - filtring on c.
-* @i: value.
+* i: value.
 * Return: zero on success
 */
 
 int main(void)
 {
 	int i;
+
 	i = 0;
 
 	while (i <= 100)
@@ -17,6 +18,10 @@ int main(void)
 		if (i % 3 == 0 && i % 5 == 0)
 		{
 			printf("FizzBuzz ");
+		}
+		else if (i == 0)
+		{
+			printf("");
 		}
 		else if (i % 3 == 0)
 		{
