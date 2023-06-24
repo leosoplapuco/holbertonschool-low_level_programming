@@ -34,7 +34,7 @@ int main(void)
 
 	while (num <= 100)
 	{
-		fizzBuzz(num);
+		FizzBuzz(num);
 		
 		if (num != 100)
 		{
