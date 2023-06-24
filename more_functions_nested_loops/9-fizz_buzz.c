@@ -12,7 +12,7 @@ int main(void)
 	int i;
 
 	i = 1;
-	
+
 	while (i <= 100)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
@@ -30,6 +30,10 @@ int main(void)
 		else if (i != 0)
 		{
 			printf("%d ", i);
+		}
+		else if (i == 100)
+		{
+			printf("FizzBuzz");
 		}
 		i++;
 	}
