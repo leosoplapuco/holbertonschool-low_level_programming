@@ -9,8 +9,9 @@
 
 void print_line(int n)
 {
-	for (int line = 0; line < n; line++)
-	{
+	int lines;
+	
+	while (lines < n) {
 		if (n <= 0)
 		{
 			putchar('\n');
@@ -20,6 +21,7 @@ void print_line(int n)
 		{
 			putchar('_');
 		}
+		lines++;
 	}
 
 	putchar('\n');
