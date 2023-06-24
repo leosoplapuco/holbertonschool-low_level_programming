@@ -3,7 +3,7 @@
 
 /**
 * print_square - drawing on c.
-* @n: times that repeat the line.
+* @size: times that repeat the #.
 * Return: zero on success
 */
 
