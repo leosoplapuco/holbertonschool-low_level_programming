@@ -15,7 +15,7 @@ void print_triangle(int size)
 	int a;
 	int b;
 	int c;
-	
+
 	if (size > 0)
 	{
 		for (a = 1; a <= size; a++)
@@ -28,7 +28,6 @@ void print_triangle(int size)
 			{
 				printf("#");
 			}
-
 			printf("\n");
 		}
 	}
