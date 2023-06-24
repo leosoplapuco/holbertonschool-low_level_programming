@@ -3,6 +3,7 @@
 
 /**
 * FizzBuzz - function to change characteres.
+* main - principal functions.
 * @num: value.
 * Return: zero on success
 */
