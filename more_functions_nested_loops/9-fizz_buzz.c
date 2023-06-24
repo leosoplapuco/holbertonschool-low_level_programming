@@ -9,8 +9,10 @@
 
 int main(void)
 {
-	int i
-	for (i = 1; i <= 100; i++)
+	int i;
+	i = 0;
+
+	while (i <= 100)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
 		{
@@ -24,10 +26,12 @@ int main(void)
 		{
 			printf("Buzz ");
 		}
-		else{
+		else
+		{
 			printf("%d ", i);
 		}
+		i++;
 	}
 	printf("\n");
-	return 0;
+	return (0);
 }
