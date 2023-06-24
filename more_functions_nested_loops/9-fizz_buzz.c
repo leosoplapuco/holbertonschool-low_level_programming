@@ -2,7 +2,6 @@
 #include "main.h"
 
 /**
-* main - principal function.
 * FizzBuzz - function to change characteres.
 * @num: value.
 * Return: zero on success
