@@ -7,18 +7,16 @@
 * Return: zero on success
 */
 
-Write a function that draws a straight line in the terminal.
-
 void print_line(int n)
 {
 	if (n <= 0) {
-		putchar('\n');
+		_putchar('\n');
 		return;
 	}
 	for (int line = 0; line < n; line++)
 	{
-		putchar('_');
+		_putchar('_');
 	}
 
-	putchar('\n');
+	_putchar('\n');
 }
