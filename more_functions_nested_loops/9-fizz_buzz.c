@@ -30,20 +30,21 @@ void FizzBuzz(int num)
 int main(void)
 {
 	int num;
+
 	num = 1;
 
 	while (num <= 100)
 	{
 		FizzBuzz(num);
-		
+
 		if (num != 100)
 		{
 			printf(" ");
 		}
-		
 		num++;
 	}
-	
+
 	printf("\n");
+
 	return (0);
 }
