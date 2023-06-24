@@ -20,13 +20,13 @@ void print_triangle(int size)
 	{
 		for (c = 1; c <= size -a; c++)
 		{
-			_putchar(" ");
+			printf(" ");
 		}
 		for (b=1; b <= a; b++)
 		{
 			printf("#");
 		}
 
-		_putchar('\n');
+		printf("\n");
 	}
 }
