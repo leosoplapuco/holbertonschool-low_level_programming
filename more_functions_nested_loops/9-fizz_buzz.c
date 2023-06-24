@@ -11,7 +11,7 @@ int main(void)
 {
 	int i;
 
-	i = 0;
+	i = 1;
 	
 	while (i <= 100)
 	{
