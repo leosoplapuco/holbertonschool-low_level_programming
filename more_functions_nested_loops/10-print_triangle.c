@@ -4,27 +4,29 @@
 /**
 * print_triangle - drawing on c.
 * @size: size to draw the triangle.
-* @i: value.
-* @j: value.
+* a: value to column.
+* b: value to rowe.
+* c: spaces.
 * Return: zero on success
 */
 
 void print_triangle(int size)
 {
-	int i;
-	int j;
+	int a;
+	int b;
+	int c;
 
-	if (size <= 0)
+	for (a = 1; a <= size; a++)
 	{
-		putchar('\n');
-		return;
-	}
-	for (i = 1; i <= size; i++)
-	{
-		for (j = 1; j <= i; j++)
+		for (c = 1; c <= size -a; c++)
 		{
-			putchar('#');
+			printf("");
 		}
-		putchar('\n');
+		for (b=1; b <= a; b++)
+		{
+			printf("#");
+		}
+
+		printf("\n");
 	}
 }
