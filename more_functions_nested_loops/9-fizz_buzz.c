@@ -19,10 +19,6 @@ int main(void)
 		{
 			printf("FizzBuzz ");
 		}
-		else if (i != 0)
-		{
-			printf("d% ", i);
-		}
 		else if (i % 3 == 0)
 		{
 			printf("Fizz ");
