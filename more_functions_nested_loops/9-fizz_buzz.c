@@ -7,37 +7,34 @@
 * Return: zero on success
 */
 
-int main(void)
-{
-	int i;
-	i = 1;
 
-	while (i <= 100)
-	{
-		if (i % 3 == 0 && i % 5 == 0)
-		{
-			printf("FizzBuzz");
-		}
-		else if (i % 3 == 0)
-		{
-			printf("Fizz");
-		}
-		else if (i % 5 == 0)
-		{
-			printf("Buzz");
-		}
-		else
-		{
-			printf("%d ", i);
-		}
-
-		if (i != 100)
-		{
-			printf(" ");
-		}
-
-		i++;
-	}
-	printf("\n");
-	return (0);
+void fizzBuzz(int num) {
+    if (num % 3 == 0 && num % 5 == 0) {
+        printf("FizzBuzz");
+    } else if (num % 3 == 0) {
+        printf("Fizz");
+    } else if (num % 5 == 0) {
+        printf("Buzz");
+    } else {
+        printf("%d", num);
+    }
 }
+
+int main(void) {
+    int num = 1;
+
+    while (num <= 100) {
+        fizzBuzz(num);
+
+        if (num != 100) {
+            printf(" ");
+        }
+
+        num++;
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
