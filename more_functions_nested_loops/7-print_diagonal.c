@@ -22,7 +22,7 @@ void print_diagonal(int n)
 
 	while (i < n)
 	{
-		j= 0;
+		j = 0;
 
 		while (j < i)
 		{
@@ -32,5 +32,5 @@ void print_diagonal(int n)
 		_putchar('\\');
 		_putchar('\n');
 		i++;
-    }
+	}
 }
