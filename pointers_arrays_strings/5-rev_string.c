@@ -8,34 +8,28 @@
 * Return: zero on success
 */
 
-void rev_string(char *s) {
-    int length = 0;
-    char *start = s;
-    char *end = s;
+void rev_string(char *s)
+{
+	int length = 0;
+	int a = 0;
+	char *b = s;
+	int c = 0;
+	int d;
+	char e;
 
-    while (*end != '\0') {
-        length++;
-        end++;
-    }
+	while (*b != '\0')
+	{
+		b++;
+		length++;
+	}
 
-    end--;
+	a = length - 1;
 
-    while (start < end) {
-        char temp = *start;
-        *start = *end;
-        *end = temp;
-
-        start++;
-        end--;
-    }
+	for ( ; c < ((l / 2) + 1) ; c++)
+	{
+		d = (a - c);
+		n = s[c];
+		s[c] = s[d];
+		s[d] = e;
+	}
 }
-
-int main() {
-    char str[] = "Hola, mundo!";
-    printf("Cadena original: %s\n", str);
-    rev_string(str);
-    printf("Cadena invertida: %s\n", str);
-
-    return 0;
-}
-
