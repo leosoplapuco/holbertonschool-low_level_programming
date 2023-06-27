@@ -3,24 +3,26 @@
 
 /**
 *print_array - principal function.
-*@a: first evaluate.
-*@n: second value.
-*c: third value.
+*@dest: first evaluate.
+*@src: second value.
+*a: third value.
+*b: four value.
 *Return: zero on success.
 */
 
-void print_array(int *a, int n)
+char *_strcpy(char *dest, char *src)
 {
-	int c;
+	int a = 0;
+	int b = 0;
 
-	for (c = 0 ; c < n; c++)
+	while (*(src + a) != '\0')
 	{
-		printf("%d", a[c]);
-		if (c != n - 1)
-		{
-			printf(", ");
-		}
+		a++;
 	}
-
-	printf("\n");
+	for ( ; b < a ; b++)
+	{
+		dest[b] = src[b];
+	}
+	dest[a] = '\0';
+	return (dest);
 }
