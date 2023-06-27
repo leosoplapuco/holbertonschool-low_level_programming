@@ -9,14 +9,19 @@
 */
 
 void swap_int(int *a, int *b){
-	int *c;
-	int *d;
+	*a = *a ^ *b;
+	*b = *a ^ *b;
+	*a = *a ^ *b;
+}
 
-	c = &a;
-	d = &b;
+int main()
+{
+	int x;
+	int y;
 
-	printf("%d\n", a, b);
-	printf("%d\n", c, d);
+	printf("Antes del intercambio: x = %d, y = %d\n", x, y);
+	swap_int(&x, &y);
+	printf("Después del intercambio: x = %d, y = %d\n", x, y);
 
 	return (0);
 }
