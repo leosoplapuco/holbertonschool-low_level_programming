@@ -16,12 +16,12 @@ void swap_int(int *a, int *b){
 
 int main()
 {
-	int x;
-	int y;
+	int a;
+	int b;
 
-	printf("Antes del intercambio: x = %d, y = %d\n", x, y);
-	swap_int(&x, &y);
-	printf("Después del intercambio: x = %d, y = %d\n", x, y);
+	printf("a = %d, b = %d\n", a, b);
+	swap_int(&a, &b);
+	printf("a = %d, b = %d\n", a, b);
 
 	return (0);
 }
