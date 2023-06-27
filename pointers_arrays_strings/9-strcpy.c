@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
-*print_array - principal function.
+* *_strcpy - principal function.
 *@dest: first evaluate.
 *@src: second value.
 *a: third value.
