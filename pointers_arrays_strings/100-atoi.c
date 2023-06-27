@@ -6,6 +6,7 @@
 /**
 * _atoi - principal function.
 * @s: value.
+* Return: zero on success.
 */
 
 int _atoi(char *s)
