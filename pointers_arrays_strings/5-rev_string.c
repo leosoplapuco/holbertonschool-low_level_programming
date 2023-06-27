@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
-* prev_string - principal function.
+* rev_string - principal function.
 * @s: value.
 * length: length.
 * Return: zero on success
