@@ -1,51 +1,32 @@
 #include <stdio.h>
 #include <limits.h>
 #include "main.h"
+#include <stdbool.h>
 
 /**
 * _atoi - principal function.
 * @s: value.
 */
 
-int _atoi(char *s)
-{
-	int sign;
-	int result;
-	int i;
+int _atoi(char *s) {
+    int result = 0;
+    int sign = 1;
+    bool number_found = false;
 
-	sign = 1;
-	result = 0;
-	i = 0;
 
-	while (s[i] == ' ')
-	{
-		i++;
-	}
+    while (*s != '\0') {
+        if (*s == '-' || *s == '+') {
+            sign = (*s == '-') ? -1 : 1;
+        } else if (*s >= '0' && *s <= '9') {
+            result = (result * 10) + (*s - '0');
+            number_found = true;
+        } else {
+            if (number_found) {
+                break;
+            }
+        }
 
-	if (s[i] == '-' || s[i] == '+')
-	{
-		if (s[i] == '-')
-		{
-			sign = -1;
-		}
-		i++;
-	}
+        s++;
+    }
 
-	while (s[i] >= '0' && s[i] <= '9')
-	{
-		if (result > (INT_MAX / 10) || (result == (INT_MAX / 10) && (s[i] - '0') > (INT_MAX % 10)))
-		{
-			if (sign == 1)
-			{
-				return (INT_MAX);
-			}
-			else
-			{
-				return (INT_MIN);
-			}
-		}
-		result = (result * 10) + (s[i] - '0');
-		i++;
-	}
-	return (sign * result);
-}
+    return sign * result;
