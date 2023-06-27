@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
-* print_rev - principal function.
+* prev_string - principal function.
 * @s: value.
 * length: length.
 * Return: zero on success
@@ -10,7 +10,7 @@
 
 void rev_string(char *s)
 {
-		int len = 0;
+	int length = 0;
 	int l = 0;
 	char *y = s;
 	int e = 0;
@@ -20,9 +20,11 @@ void rev_string(char *s)
 	while (*y != '\0')
 	{
 		y++;
-		len++;
+		length++;
 	}
-	l = len - 1;
+
+	l = length - 1;
+
 	for ( ; e < ((l / 2) + 1) ; e++)
 	{
 		x = (l - e);
