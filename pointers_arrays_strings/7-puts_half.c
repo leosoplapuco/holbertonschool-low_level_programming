@@ -1,10 +1,12 @@
 #include <stdio.h>
-#include "holberton.h"
+#include "main.h"
+
 /**
 *puts_half - Principal function.
 *@str: value.
 *Return: zero on succes.
 */
+
 void puts_half(char *str)
 {
 	int length = 0;
