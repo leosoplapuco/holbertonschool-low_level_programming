@@ -8,20 +8,9 @@
 * Return: zero on success
 */
 
-void swap_int(int *a, int *b){
-	*a = *a ^ *b;
-	*b = *a ^ *b;
-	*a = *a ^ *b;
-}
-
-int main()
+void swap_int(int *a, int *b)
 {
-	int a;
-	int b;
-
-	printf("a = %d, b = %d\n", a, b);
-	swap_int(&a, &b);
-	printf("a = %d, b = %d\n", a, b);
-
-	return (0);
+	int c = *a;
+	*a = *b;
+	*b = n;
 }
