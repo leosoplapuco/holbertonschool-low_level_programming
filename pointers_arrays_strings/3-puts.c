@@ -4,7 +4,7 @@
 /**
 * _puts - principal function.
 * @str: value.
-* @a: second value.
+* a: second value.
 * Return: zero on success
 */
 
