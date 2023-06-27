@@ -5,7 +5,7 @@
 *print_array - Principal function.
 *@a: first value.
 *@n: seconf value.
-*@c: third value.
+*c: third value.
 *Return: zero on succes.
 */
 
