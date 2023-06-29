@@ -27,16 +27,3 @@ int is_prime_number(int n) {
 
     return is_divisible(n, 2);
 }
-
-int main() {
-    int num = 17;
-
-    if (is_prime_number(num)) {
-        printf("%d es un número primo.\n", num);
-    } else {
-        printf("%d no es un número primo.\n", num);
-    }
-
-    return 0;
-}
-
