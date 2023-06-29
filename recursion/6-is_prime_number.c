@@ -9,11 +9,15 @@
 */
 
 int is_divisible(int n, int divisor) {
-    if (divisor * divisor > n) {
-        return 0;
+    if (n == 2) {
+        return 1;
     }
 
     if (n % divisor == 0) {
+        return 0;
+    }
+
+    if (divisor * divisor > n) {
         return 1;
     }
 
