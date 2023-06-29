@@ -4,20 +4,35 @@
 /**
 * _sqrt_recursion - Principal function.
 * @n: value.
+* @start: value zero.
+* @end: value one.
+* @m: value three;
+* mid: mid.
 * Return: Zero on success.
 */
 
+int fucntion(int start, int end, int m)
+{
+	long mid;
+
+	if (end >= start)
+	{
+		mid = start + (end - start) / 2;
+		if (mid * mid == m)
+			return (mid);
+		if (mid * mid > m)
+			return (function(start, mid - 1, m));
+		if (mid * mid < m)
+			return (function(mid + 1, end, m));
+	}
+	return (-1);
+}
+
 int _sqrt_recursion(int n)
 {
-    if (start > end) {
-        return -1;
-    }
-    int mid = (start + end) / 2;
-    if (mid * mid == n) {
-        return mid;
-    }
-    if (mid * mid > n) {
-        return _sqrt_helper(n, start, mid - 1);
-    }
-    return _sqrt_helper(n, mid + 1, end);
+	if (n < 0)
+		return (-1);
+	if (n == 0 || n == 1)
+		return (n);
+	return (function(2, n, n));
 }
