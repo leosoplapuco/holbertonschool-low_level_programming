@@ -11,7 +11,7 @@
 * Return: Zero on success.
 */
 
-int fucntion(int start, int end, int m)
+int function(int start, int end, int m)
 {
 	long mid;
 
