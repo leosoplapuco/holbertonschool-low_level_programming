@@ -4,7 +4,7 @@
 /**
 *is_divisible - second function
 *@n: value.
-*divisor: divisor.
+*@divisor: divisor.
 *Return: zero on success.
 */
 
