@@ -3,22 +3,29 @@
 
 /**
 *is_prime_number - principal function
-*@n: value-
+*@n: value.
+*divisor: divisor.
 *Return: zero on success.
 */
 
 int is_prime_number(int n)
 {
+	int divisor;
+
 	if (n <= 1)
 	{
-		return 0;
+		return (0);
 	}
-	for (int i = 2; i * i <= n; i++)
+
+	divisor = 2;
+
+	while (divisor * divisor <= n)
 	{
-		if (n % i == 0)
-		{
-			return (0);
-		}
+        if (n % divisor == 0)
+	{
+		return (0);
+        }
+	divisor++;
 	}
 	return (1);
 }
