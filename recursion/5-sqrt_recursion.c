@@ -2,8 +2,9 @@
 #include "main.h"
 
 /**
-* _sqrt_recursion - Principal function.
-* @n: value.
+* function - principal function.
+* _sqrt_recursion - second function.
+* n: value.
 * @start: value zero.
 * @end: value one.
 * @m: value three;
