@@ -1,7 +1,16 @@
 #include <stdio.h>
 #include "main.h"
 
-int main(void) {
-    printf("%s\n", __FILE__);
-    return 0;
+/**
+* main - principal function.
+*@argc: count.
+*@argv: arrays.
+*Return: zero on success.
+*/
+
+int main(int argc, char *argv[])
+{
+	argc = argc;
+	printf("%s\n", *argv);
+	return (0);
 }
