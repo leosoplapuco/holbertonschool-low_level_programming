@@ -1,43 +1,41 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-char *str_concat(char *s1, char *s2) {
-    if (s1 == NULL) {
-        s1 = "";
-    }
-    if (s2 == NULL) {
-        s2 = "";
-    }
-    
-    size_t len1 = strlen(s1);
-    size_t len2 = strlen(s2);
-    
-    char *result = (char *)malloc((len1 + len2 + 1) * sizeof(char));
-    if (result == NULL) {
-        return NULL;
-    }
-    
-    strcpy(result, s1);
-    strcat(result, s2);
-    
-    return result;
+/**
+* *str_concat - principal function.
+*@s1: first value.
+*@s2: second value.
+*Return: zero con success.
+**/
+
+char *str_concat(char *s1, char *s2)
+{
+	char *strDup;
+	int a, b;
+
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	a = b = 0;
+	while (s1[a] != '\0')
+		a++;
+	while (s2[b] != '\0')
+		b++;
+	strDup = malloc(sizeof(char) * (a + b + 1));
+	if (strDup == NULL)
+		return (NULL);
+	a = b = 0;
+	while (s1[a] != '\0')
+	{
+		strDup[a] = s1[a];
+		a++;
+	}
+	while (s2[b] != '\0')
+	{
+		strDup[b] = s2[b];
+		a++, b++;
+	}
+	strDup[a] = '\0';
+	return (strDup);
 }
-
-int main() {
-    char *s1 = "Hello, ";
-    char *s2 = "world!";
-    
-    char *concatenated = str_concat(s1, s2);
-    if (concatenated == NULL) {
-        printf("Memory allocation failed.\n");
-        return 1;
-    }
-    
-    printf("Concatenated string: %s\n", concatenated);
-    
-    free(concatenated); // Remember to free the dynamically allocated memory
-    
-    return 0;
-}
-
