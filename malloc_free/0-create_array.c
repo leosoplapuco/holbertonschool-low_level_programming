@@ -5,6 +5,7 @@
 *create_array - principal function.
 *@size: first value.
 *@c: second value.
+*Return: zero on success.
 */
 
 char *create_array(unsigned int size, char c)
