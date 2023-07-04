@@ -9,15 +9,13 @@ struct dog {
     char *owner;
 };
 
-void init_dog(struct dog *d, char *name, float age, char *owner);
+void init_dog(struct dog *d, char *name, float age, char *owner) {
+    d->name = name;
+    d->age = age;
+    d->owner = owner;
+}
 
 int main(void) {
     struct dog my_dog;
+    return 0;
 }
-
-void init_dog(struct dog *d, char *name, float age, char *owner) {
-    d->name = strdup(name);
-    d->age = age;
-    d->owner = strdup(owner);
-}
-
