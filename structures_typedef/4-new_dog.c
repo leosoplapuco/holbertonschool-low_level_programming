@@ -1,30 +1,63 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "main.h"
 
-dog_t *new_dog(char *name, float age, char *owner)
-{
+typedef struct {
+    char *name;
+    float age;
+    char *owner;
+} dog_t;
+
+dog_t *new_dog(char *name, float age, char *owner) {
     dog_t *new_dog;
-    char *name_copy, *owner_copy;
+
+    if (name == NULL || owner == NULL)
+        return NULL;
 
     new_dog = malloc(sizeof(dog_t));
     if (new_dog == NULL)
         return NULL;
 
-    name_copy = strdup(name);
-    owner_copy = strdup(owner);
-    if (name_copy == NULL || owner_copy == NULL)
-    {
+    new_dog->name = malloc(strlen(name) + 1);
+    if (new_dog->name == NULL) {
         free(new_dog);
-        free(name_copy);
-        free(owner_copy);
         return NULL;
     }
 
-    new_dog->name = name_copy;
+    new_dog->owner = malloc(strlen(owner) + 1);
+    if (new_dog->owner == NULL) {
+        free(new_dog->name);
+        free(new_dog);
+        return NULL;
+    }
+
+    strcpy(new_dog->name, name);
+    strcpy(new_dog->owner, owner);
     new_dog->age = age;
-    new_dog->owner = owner_copy;
 
     return new_dog;
+}
+
+int main(void) {
+    char *name = "Buddy";
+    float age = 3.5;
+    char *owner = "John";
+
+    dog_t *my_dog = new_dog(name, age, owner);
+    if (my_dog == NULL) {
+        printf("Failed to create a new dog.\n");
+        return 1;
+    }
+
+    printf("New dog created:\n");
+    printf("Name: %s\n", my_dog->name);
+    printf("Age: %.1f\n", my_dog->age);
+    printf("Owner: %s\n", my_dog->owner);
+
+    free(my_dog->name);
+    free(my_dog->owner);
+    free(my_dog);
+
+    return 0;
 }
 
