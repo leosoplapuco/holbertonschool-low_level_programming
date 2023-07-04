@@ -3,10 +3,10 @@
 
 /**
 * init_dog - principal function.
-* @d: name of struct
-* @name: name of dog in struct
-* @age: age of dog in struct
-* @owner: name of owner of dog in struct
+* @d: pointer.
+* @name: name pointer.
+* @age: age pointer.
+* @owner: owner pointer.
 */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
@@ -16,5 +16,5 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 		d->name = name;
 		d->age = age;
 		d->owner = owner;
-	}
-}
+	};
+};
