@@ -3,6 +3,7 @@
 
 /**
 *main - principal function to save infromation about our pets.
+*'&dog' - Adding information about our pets.
 *Return: zero on success.
 */
 
