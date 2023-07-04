@@ -1,4 +1,6 @@
 #include <stdio.h>
+#ifndef main.h
+#define main.h
 
 /**
 * struct dog - adding information about our pet.
@@ -14,3 +16,5 @@ struct dog
 	float age;
 	char *owner;
 };
+
+#endif
