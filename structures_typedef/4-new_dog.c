@@ -4,7 +4,7 @@
 
 /**
 * *new_dog - principal function.
-* struct  - adding information about our pets.
+* struct struct - adding information about our pets.
 * @name: name.
 * @age: age.
 * @owner: owner.
