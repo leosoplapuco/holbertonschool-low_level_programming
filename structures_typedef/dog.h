@@ -1,6 +1,6 @@
 #include <stdio.h>
-#ifndef main.h
-#define main.h
+#ifndef main
+#define main
 
 /**
 * struct dog - adding information about our pet.
