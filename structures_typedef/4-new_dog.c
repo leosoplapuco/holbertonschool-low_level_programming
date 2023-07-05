@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "main.h"
 
 /**
 * new_dog - principal function.
@@ -9,6 +10,8 @@
 * @owner: owner.
 * Return: zero con success.
 */
+
+
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
