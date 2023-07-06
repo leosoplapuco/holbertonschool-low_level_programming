@@ -7,14 +7,45 @@
 * Return: zero on success.
 */
 
+#include <stdarg.h>
+#include <stdio.h>
+
+void print_char(va_list args)
+{
+    char c = va_arg(args, int);
+    printf("%c", c);
+}
+
+void print_int(va_list args)
+{
+    int intValue = va_arg(args, int);
+    printf("%d", intValue);
+}
+
+void print_float(va_list args)
+{
+    double floatValue = va_arg(args, double);
+    printf("%f", floatValue);
+}
+
+void print_string(va_list args)
+{
+    char *stringValue = va_arg(args, char *);
+    if (stringValue == NULL)
+    {
+        printf("(nil)");
+    }
+    else
+    {
+        printf("%s", stringValue);
+    }
+}
+
 void print_all(const char * const format, ...)
 {
     va_list args;
     const char *ptr = format;
     char c;
-    int intValue;
-    float floatValue;
-    char *stringValue;
 
     va_start(args, format);
 
@@ -25,30 +56,19 @@ void print_all(const char * const format, ...)
 
         if (c == 'c')
         {
-            intValue = va_arg(args, int);
-            printf("%c", (char)intValue);
+            print_char(args);
         }
         else if (c == 'i')
         {
-            intValue = va_arg(args, int);
-            printf("%d", intValue);
+            print_int(args);
         }
         else if (c == 'f')
         {
-            floatValue = va_arg(args, double);
-            printf("%f", floatValue);
+            print_float(args);
         }
         else if (c == 's')
         {
-            stringValue = va_arg(args, char *);
-            if (stringValue == NULL)
-            {
-                printf("(nil)");
-            }
-            else
-            {
-                printf("%s", stringValue);
-            }
+            print_string(args);
         }
     }
 
@@ -56,3 +76,4 @@ void print_all(const char * const format, ...)
 
     va_end(args);
 }
+
