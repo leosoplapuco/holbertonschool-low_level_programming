@@ -1,6 +1,12 @@
 #include <stdarg.h>
 #include "main.h"
 
+/**
+* sum_them_all - principal function.
+* @n: initial value.
+* Return: zero on success.
+*/
+
 int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int i;
@@ -17,6 +23,7 @@ int sum_them_all(const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		int num = va_arg(args, int);
+
 		sum += num;
 	}
 	va_end(args);
