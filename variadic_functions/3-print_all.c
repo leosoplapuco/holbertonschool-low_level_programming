@@ -7,13 +7,14 @@
 * Return: zero on success.
 */
 
+#include <stdarg.h>
+#include <stdio.h>
+
 void print_all(const char * const format, ...)
 {
     va_list args;
     const char *ptr = format;
     char c;
-    int i;
-    float f;
     char *s;
 
     va_start(args, format);
