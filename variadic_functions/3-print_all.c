@@ -12,7 +12,9 @@ void print_all(const char * const format, ...)
     va_list args;
     const char *ptr = format;
     char c;
-    char *s;
+    int intValue;
+    float floatValue;
+    char *stringValue;
 
     va_start(args, format);
 
@@ -23,26 +25,29 @@ void print_all(const char * const format, ...)
 
         if (c == 'c')
         {
-            printf("%c", va_arg(args, int));
+            intValue = va_arg(args, int);
+            printf("%c", (char)intValue);
         }
         else if (c == 'i')
         {
-            printf("%d", va_arg(args, int));
+            intValue = va_arg(args, int);
+            printf("%d", intValue);
         }
         else if (c == 'f')
         {
-            printf("%f", va_arg(args, double));
+            floatValue = va_arg(args, double);
+            printf("%f", floatValue);
         }
         else if (c == 's')
         {
-            s = va_arg(args, char *);
-            if (s == NULL)
+            stringValue = va_arg(args, char *);
+            if (stringValue == NULL)
             {
                 printf("(nil)");
             }
             else
             {
-                printf("%s", s);
+                printf("%s", stringValue);
             }
         }
     }
