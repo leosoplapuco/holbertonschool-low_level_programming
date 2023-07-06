@@ -3,7 +3,7 @@
 
 /**
 * print_numbers - principal function.
-* *separator: space.
+* @*separator: space.
 * @n: initial value.
 * Return: zero on success.
 */
