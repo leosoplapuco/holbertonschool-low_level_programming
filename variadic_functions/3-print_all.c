@@ -7,15 +7,13 @@
 * Return: zero on success.
 */
 
-#include <stdarg.h>
-#include <stdio.h>
-
 void print_all(const char * const format, ...)
 {
     va_list args;
     const char *ptr = format;
     char c;
     char *s;
+    int printed = 0;
 
     va_start(args, format);
 
@@ -24,36 +22,33 @@ void print_all(const char * const format, ...)
         c = *ptr;
         ptr++;
 
-        if (*ptr)
+        if (c == 'c')
         {
-            switch (c)
+            printf("%c", va_arg(args, int));
+            printed = 1;
+        }
+        if (c == 'i')
+        {
+            printf("%d", va_arg(args, int));
+            printed = 1;
+        }
+        if (c == 'f')
+        {
+            printf("%f", va_arg(args, double));
+            printed = 1;
+        }
+        if (c == 's')
+        {
+            s = va_arg(args, char *);
+            if (s == NULL)
             {
-                case 'c':
-                    printf("%c", va_arg(args, int));
-                    break;
-                case 'i':
-                    printf("%d", va_arg(args, int));
-                    break;
-                case 'f':
-                    printf("%f", va_arg(args, double));
-                    break;
-                case 's':
-                    s = va_arg(args, char *);
-                    if (s == NULL)
-                    {
-                        printf("(nil)");
-                        break;
-                    }
-                    printf("%s", s);
-                    break;
-                default:
-                    continue;
+                printf("(nil)");
             }
-
-            if (*(ptr))
+            else
             {
-                printf(", ");
+                printf("%s", s);
             }
+            printed = 1;
         }
     }
 
@@ -61,4 +56,3 @@ void print_all(const char * const format, ...)
 
     va_end(args);
 }
-
