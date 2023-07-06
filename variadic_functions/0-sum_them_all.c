@@ -6,14 +6,15 @@ int sum_them_all(const unsigned int n, ...) {
         return 0;
 
     int sum = 0;
+    unsigned int count = n;
 
     va_list args;
     va_start(args, n);
 
-    while (n > 0) {
+    while (count > 0) {
         int num = va_arg(args, int);
         sum += num;
-        n--;
+        count--;
     }
 
     va_end(args);
