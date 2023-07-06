@@ -13,7 +13,6 @@ void print_all(const char * const format, ...)
     const char *ptr = format;
     char c;
     char *s;
-    int printed = 0;
 
     va_start(args, format);
 
@@ -25,19 +24,16 @@ void print_all(const char * const format, ...)
         if (c == 'c')
         {
             printf("%c", va_arg(args, int));
-            printed = 1;
         }
-        if (c == 'i')
+        else if (c == 'i')
         {
             printf("%d", va_arg(args, int));
-            printed = 1;
         }
-        if (c == 'f')
+        else if (c == 'f')
         {
             printf("%f", va_arg(args, double));
-            printed = 1;
         }
-        if (c == 's')
+        else if (c == 's')
         {
             s = va_arg(args, char *);
             if (s == NULL)
@@ -48,7 +44,6 @@ void print_all(const char * const format, ...)
             {
                 printf("%s", s);
             }
-            printed = 1;
         }
     }
 
