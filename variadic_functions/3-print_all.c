@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "variadic_functions.h"
-
+/**
+ * print_i - prints int
+ * @list: arguement of list
+ * @s: seperator
+ * Return: none
+ */
 void print_i(va_list list, char *s)
 {
 	printf("%s%d", s, va_arg(list, int));

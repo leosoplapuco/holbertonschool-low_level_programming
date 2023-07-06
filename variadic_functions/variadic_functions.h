@@ -10,7 +10,7 @@ void print_all(const char * const format, ...);
 /**
 * struct typ - principal struct.
 * @c: value.
-* @tp: value.
+* @tp: value
 */
 
 typedef struct typ
