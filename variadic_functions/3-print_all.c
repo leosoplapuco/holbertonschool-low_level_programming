@@ -3,9 +3,11 @@
 #include "variadic_functions.h"
 
 /**
- * print_all - imprime una lista de argumentos con formato
- * @format: cadena de formato
- */
+* print_all - principal function.
+* @format: value.
+* Return: zero on succes.
+*/
+
 void print_all(const char * const format, ...)
 {
 	va_list args;
@@ -33,6 +35,7 @@ void print_all(const char * const format, ...)
 			case 's':
 				{
 					char *str = va_arg(args, char *);
+
 					if (str == NULL)
 						str = "(nil)";
 					printf("%s", str);
