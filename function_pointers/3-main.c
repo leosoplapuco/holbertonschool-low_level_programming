@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include "3-calc.h"
 
+/**
+* main - principal function.
+* @argc: value.
+* @argv: value.
+* Return: zero on succes.
+*/
+
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
