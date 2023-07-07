@@ -1,6 +1,11 @@
 #include <stdlib.h>
 #include "function_pointers.h"
 
+/**
+* int_index - principal function.
+* Return: zero on succes.
+*/
+
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
