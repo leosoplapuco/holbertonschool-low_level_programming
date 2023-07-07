@@ -3,6 +3,10 @@
 
 /**
 * struct op - principal struct.
+* @op: value.
+* @f: value.
+* @a: value.
+* @b: value.
 * Return: zero on succes.
 */
 
