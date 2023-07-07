@@ -4,9 +4,7 @@
 /**
 * struct op - principal struct.
 * @op: value.
-* @f: value.
-* @a: value.
-* @b: value.
+* @f: value..
 * Return: zero on succes.
 */
 
