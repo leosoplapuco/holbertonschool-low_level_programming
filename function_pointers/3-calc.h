@@ -2,7 +2,7 @@
 #define _3_CALC_H_
 
 /**
-* op - principal struct.
+* struct op - principal struct.
 * Return: zero on succes.
 */
 
