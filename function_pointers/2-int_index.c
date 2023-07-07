@@ -3,6 +3,9 @@
 
 /**
 * int_index - principal function.
+* @array: value.
+* @size: value.
+* @cmp: value.
 * Return: zero on succes.
 */
 
