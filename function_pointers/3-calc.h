@@ -1,6 +1,11 @@
 #ifndef _3_CALC_H_
 #define _3_CALC_H_
 
+/**
+* op - principal struct.
+* Return: zero on succes.
+*/
+
 typedef struct op
 {
 	char *op;

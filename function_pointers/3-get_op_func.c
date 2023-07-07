@@ -1,6 +1,12 @@
 #include "3-calc.h"
 #include <stddef.h>
 
+/**
+* get_op_func - principal function.
+* @s: value.
+* Return: zero on succes.
+*/
+
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
