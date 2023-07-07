@@ -1,57 +1,68 @@
 #include <stdio.h>
-#include <stdarg.h>
+#include <stdlib.h>
 #include "variadic_functions.h"
 
 /**
-* print_all - principal function.
-* @format: value.
-* Return: zero on succes.
+* print_i - principal function.
+* @list: value.
+* @s: value.
+* Return: Zero on success.
 */
+
+void print_i(va_list list, char *s)
+{
+	printf("%s%d", s, va_arg(list, int));
+}
+
+void print_c(va_list list, char *sep)
+{
+	printf("%s%c", sep, va_arg(list, int));
+}
+
+void print_s(va_list list, char *sep)
+{
+	char *s;
+
+	s = va_arg(list, char *);
+	if (s == NULL)
+		s = "(nil)";
+	printf("%s%s", sep, s);
+}
+
+void print_f(va_list list, char *sep)
+{
+	printf("%s%f", sep, va_arg(list, double));
+}
 
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	const char *ptr = format;
-	char *sep = "";
-	int printed = 0;
-
-	va_start(args, format);
-
-	while (format && *ptr)
+	va_list list;
+	char *sep;
+	int i, j;
+	fm_t fm[] = {
+		{"c", print_c},
+		{"i", print_i},
+		{"f", print_f},
+		{"s", print_s},
+		{NULL, NULL}
+	};
+	va_start(list, format);
+	i = 0;
+	sep = "";
+	while (format != NULL && format[i] != '\0')
 	{
-		if (printed)
-			printf("%s", sep);
-		switch (*ptr)
+		j = 0;
+		while (j < 4)
 		{
-			case 'c':
-				printf("%c", va_arg(args, int));
-				break;
-			case 'i':
-				printf("%d", va_arg(args, int));
-				break;
-			case 'f':
-				printf("%f", va_arg(args, double));
-				break;
-			case 's':
-				{
-					char *str = va_arg(args, char *);
-
-					if (str == NULL)
-						str = "(nil)";
-					printf("%s", str);
-					break;
-				}
-			default:
-				ptr++;
-				continue;
+			if (format[i] == *(fm[j]).fm)
+			{
+				fm[j].p(list, sep);
+				sep = ", ";
+			}
+			j++;
 		}
-		sep = ", ";
-		printed = 1;
-		ptr++;
+		i++;
 	}
-
 	printf("\n");
-
-	va_end(args);
+	va_end(list);
 }
-
