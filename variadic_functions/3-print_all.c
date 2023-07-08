@@ -39,7 +39,8 @@ void print_all(const char * const format, ...)
                 default:
                     break;
             }
-            printf(", ");
+            if (*(ptr + 2) != '\0')
+                printf(", ");
         }
         ptr++;
     }
@@ -47,3 +48,4 @@ void print_all(const char * const format, ...)
 
     va_end(args);
 }
+
