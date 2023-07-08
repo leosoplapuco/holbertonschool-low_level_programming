@@ -7,36 +7,50 @@ void print_all(const char * const format, ...)
     const char *ptr = format;
     char *s;
     int has_comma = 0;
-    int index = 0;
 
     va_start(args, format);
 
     while (*ptr)
     {
-        has_comma = format[index + 1] != '\0' ? 1 : 0;
+        char type = *ptr;
 
-        switch (*ptr)
+        while (type != 'c' && type != 'i' && type != 'f' && type != 's')
+        {
+            ptr++;
+            type = *ptr;
+        }
+
+        switch (type)
         {
             case 'c':
-                putchar(va_arg(args, int));
+                printf("%c", va_arg(args, int));
                 break;
             case 'i':
+                if (has_comma)
+                    printf(", ");
                 printf("%d", va_arg(args, int));
+                has_comma = 1;
                 break;
             case 'f':
+                if (has_comma)
+                    printf(", ");
                 printf("%f", va_arg(args, double));
+                has_comma = 1;
                 break;
             case 's':
+                if (has_comma)
+                    printf(", ");
                 s = va_arg(args, char *);
-                printf("%s", s ? s : "(nil)");
+                printf("%s", (s != NULL) ? s : "(nil)");
+                has_comma = 1;
                 break;
         }
 
         ptr++;
-        index++;
     }
 
     printf("\n");
 
     va_end(args);
 }
+
