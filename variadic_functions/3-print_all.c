@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 
     va_start(args, format);
 
-    while (format && *ptr)
+    while (*ptr)
     {
         if (count > 0)
             printf(", ");
@@ -34,10 +34,7 @@ void print_all(const char * const format, ...)
                 break;
             case 's':
                 s = va_arg(args, char *);
-                if (s == NULL)
-                    printf("(nil)");
-                else
-                    printf("%s", s);
+                printf("%s", (s == NULL) ? "(nil)" : s);
                 break;
             default:
                 break;
@@ -51,3 +48,4 @@ void print_all(const char * const format, ...)
 
     va_end(args);
 }
+
