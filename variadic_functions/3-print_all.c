@@ -7,20 +7,18 @@ void print_all(const char * const format, ...)
     const char *ptr = format;
     char *s;
     int has_comma = 0;
+    int index = 0;
 
     va_start(args, format);
 
     while (*ptr)
     {
-        if (has_comma)
-            printf(", ");
-
-        has_comma = 1;
+        has_comma = format[index + 1] != '\0' ? 1 : 0;
 
         switch (*ptr)
         {
             case 'c':
-                printf("%c", va_arg(args, int));
+                putchar(va_arg(args, int));
                 break;
             case 'i':
                 printf("%d", va_arg(args, int));
@@ -30,14 +28,12 @@ void print_all(const char * const format, ...)
                 break;
             case 's':
                 s = va_arg(args, char *);
-                printf("%s", (s == NULL) ? "(nil)" : s);
-                break;
-            default:
-                has_comma = 0;
+                printf("%s", s ? s : "(nil)");
                 break;
         }
 
         ptr++;
+        index++;
     }
 
     printf("\n");
