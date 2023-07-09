@@ -1,19 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "variadic_functions.h"
+
 /**
 * print_i - principal function.
 * @list: value.
 * @s: value.
-* struct fm - principal struct.
 * Return: Zero on success.
 */
-
-typedef struct fm
-{
-	char *fm;
-	void (*p)(va_list, char *);
-} fm_t;
 
 void print_i(va_list list, char *s)
 {
