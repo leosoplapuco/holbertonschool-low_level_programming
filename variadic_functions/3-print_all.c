@@ -1,93 +1,96 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdarg.h>
 #include "variadic_functions.h"
 
 /**
-* print_i - principal function.
-* @list: value.
-* @s: value.
-* Return: Zero on success.
-*/
-
-void print_i(va_list list, char *s)
+ * printf_char - printfs a char from var args
+ *
+ * @list: va_list to print from
+ *
+ * Return: void
+ */
+void printf_char(va_list list)
 {
-	printf("%s%d", s, va_arg(list, int));
+	printf("%c", (char) va_arg(list, int));
 }
 
 /**
-* print_c - first function.
-* @list: value.
-* @sep: seperator.
-*/
-
-void print_c(va_list list, char *sep)
+ * printf_int - printfs an int from var args
+ *
+ * @list: va_list to print from
+ *
+ * Return: void
+ */
+void printf_int(va_list list)
 {
-	printf("%s%c", sep, va_arg(list, int));
+	printf("%d", va_arg(list, int));
 }
 
 /**
-* print_s - second functions.
-* @sep: seperator.
-* @list: value.
-* Return: zero on success.
-*/
-
-void print_s(va_list list, char *sep)
+ * printf_float - printfs a float from var args
+ *
+ * @list: va_list to print from
+ *
+ * Return: void
+ */
+void printf_float(va_list list)
 {
-	char *s;
-
-	s = va_arg(list, char *);
-	if (s == NULL)
-		s = "(nil)";
-	printf("%s%s", sep, s);
+	printf("%f", (float) va_arg(list, double));
 }
 
 /**
-* print_f - third function.
-* @sep: separator.
-* @list: value.
-* Return: zero on success.
-*/
-
-void print_f(va_list list, char *sep)
+ * printf_string - printfs a string from var args
+ *
+ * @list: va_list to print from
+ *
+ * Return: void
+ */
+void printf_string(va_list list)
 {
-	printf("%s%f", sep, va_arg(list, double));
+	char *str = va_arg(list, char*);
+
+	while (str != NULL)
+	{
+		printf("%s", str);
+		return;
+	}
+	printf("(nil)");
 }
 
-/**
-* print_all - fourthit value.
-* @format: value.
-*/
 
+/**
+ * print_all - prints various types given a format string for the arguments
+ *
+ * @format: string containing type information for args
+ *
+ * Return: void
+ */
 void print_all(const char * const format, ...)
 {
+	const char *ptr;
 	va_list list;
-	char *sep;
-	int i, j;
-	fm_t fm[] = {
-		{"c", print_c},
-		{"i", print_i},
-		{"f", print_f},
-		{"s", print_s},
-		{NULL, NULL}
-	};
+	funckey key[4] = { {printf_char, 'c'}, {printf_int, 'i'},
+			   {printf_float, 'f'}, {printf_string, 's'} };
+	int keyind = 0, notfirst = 0;
+
+	ptr = format;
 	va_start(list, format);
-	i = 0;
-	sep = "";
-	while (format != NULL && format[i] != '\0')
+	while (format != NULL && *ptr)
 	{
-		j = 0;
-		while (j < 4)
+		if (key[keyind].spec == *ptr)
 		{
-			if (format[i] == *(fm[j]).fm)
-			{
-				fm[j].p(list, sep);
-				sep = ", ";
-			}
-			j++;
+			if (notfirst)
+				printf(", ");
+			notfirst = 1;
+			key[keyind].f(list);
+			ptr++;
+			keyind = -1;
 		}
-		i++;
+		keyind++;
+		ptr += keyind / 4;
+		keyind %= 4;
 	}
 	printf("\n");
+
 	va_end(list);
 }
