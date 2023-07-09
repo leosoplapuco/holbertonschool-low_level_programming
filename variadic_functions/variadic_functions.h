@@ -13,9 +13,16 @@ void print_all(const char * const format, ...);
 * @tp: value
 */
 
+typedef struct funckey
+{
+	void (*f)(va_list);
+	char spec;
+} funckey;
+
 typedef struct typ
 {
 	char *c;
 	void (*tp)(va_list var);
 } typ_t;
+
 #endif
