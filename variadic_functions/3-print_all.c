@@ -2,38 +2,41 @@
 #include <stdlib.h>
 #include "variadic_functions.h"
 /**
- * print_i - prints int
- * @list: arguement of list
- * @s: seperator
- * Return: none
- */
+* print_i - principal function.
+* @list: value.
+* @s: value.
+* Return: Zero on success.
+*/
 
 typedef struct fm
 {
-    char *fm;
-    void (*p)(va_list, char *);
+	char *fm;
+	void (*p)(va_list, char *);
 } fm_t;
-
 
 void print_i(va_list list, char *s)
 {
 	printf("%s%d", s, va_arg(list, int));
 }
+
 /**
- * print_c - prints char
- * @list: arguement char
- * @sep: seperator
- */
+* print_c - first function.
+* @list: value.
+* @sep: seperator.
+*/
+
 void print_c(va_list list, char *sep)
 {
 	printf("%s%c", sep, va_arg(list, int));
 }
+
 /**
- * print_s - prints string
- * @sep: seperator
- * @list: list to print
- * Return: none
- */
+* print_s - second functions.
+* @sep: seperator.
+* @list: value.
+* Return: zero on success.
+*/
+
 void print_s(va_list list, char *sep)
 {
 	char *s;
@@ -43,20 +46,24 @@ void print_s(va_list list, char *sep)
 		s = "(nil)";
 	printf("%s%s", sep, s);
 }
+
 /**
- * print_f - prints floats
- * @sep: float to print
- * @list: next arguement of list to print
- * Return: none
- */
+* print_f - third function.
+* @sep: separator.
+* @list: value.
+* Return: zero on success.
+*/
+
 void print_f(va_list list, char *sep)
 {
 	printf("%s%f", sep, va_arg(list, double));
 }
+
 /**
- * print_all - prints out all stuff
- * @format: format is list of types of arguements
- */
+* print_all - fourthit value.
+* @format: value.
+*/
+
 void print_all(const char * const format, ...)
 {
 	va_list list;
