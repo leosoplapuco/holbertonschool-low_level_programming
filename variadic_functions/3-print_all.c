@@ -5,6 +5,7 @@
 * print_i - principal function.
 * @list: value.
 * @s: value.
+* struct fm - principal struct.
 * Return: Zero on success.
 */
 
