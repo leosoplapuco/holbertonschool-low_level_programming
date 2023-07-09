@@ -1,55 +1,35 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
 * print_strings - principal function.
-* @separator: space.
-* @n: initial value
+* @separator: - separator.
+* @n: - value.
 * Return: zero on success.
 */
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list args;
+	char *sep, *ptr;
 	unsigned int i;
-	char *str;
+	va_list list;
 
-	va_start(args, n);
+	if (separator == NULL || *separator == 0)
+		sep = "";
+	else
+		sep = (char *) separator;
+	va_start(list, n);
 
 	if (n > 0)
+		printf("%s", va_arg(list, char *));
+	for (i = 1; i < n; i++)
 	{
-		str = va_arg(args, char *);
-
-		if (str == NULL)
-		{
-			printf("(nil)");
-		}
-		else
-		{
-			printf("%s", str);
-		} i = 1;
-		while (i < n)
-		{
-			str = va_arg(args, char *);
-
-			if (separator != NULL)
-			{
-				printf("%s", separator);
-			}
-			if (str == NULL)
-			{
-				printf("(nil)");
-			}
-			else
-			{
-				printf("%s", str);
-			} i++;
-			if (i == n)
-			{
-				break;
-			}
-		}
+		ptr = va_arg(list, char*);
+		if (ptr == NULL)
+			ptr = "(nil)";
+		printf("%s%s", sep, ptr);
 	}
-	va_end(args);
 	printf("\n");
+	va_end(list);
 }
