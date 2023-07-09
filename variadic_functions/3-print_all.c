@@ -7,6 +7,14 @@
  * @s: seperator
  * Return: none
  */
+
+typedef struct fm
+{
+    char *fm;
+    void (*p)(va_list, char *);
+} fm_t;
+
+
 void print_i(va_list list, char *s)
 {
 	printf("%s%d", s, va_arg(list, int));
